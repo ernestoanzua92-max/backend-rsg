@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class SolicitudesService {
   private http = inject(HttpClient);
   // Asegúrate de que este puerto sea el mismo que sale cuando corres "node index.js"
-  private apiUrl = 'http://localhost:3000/api/solicitudes';
+  private apiUrl = 'https://api-rsg.onrender.com/api/solicitudes';
 
   getSolicitudes() {
     return this.http.get<any[]>(this.apiUrl);

@@ -6,7 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SolicitudesService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/api/solicitudes';
+  
+  // CAMBIA ESTA LÍNEA: Usa tu link de Render
+  private apiUrl = 'https://api-rsg.onrender.com/api/solicitudes';
 
   getSolicitudes() {
     return this.http.get<any[]>(this.apiUrl);
