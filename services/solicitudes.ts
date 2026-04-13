@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class SolicitudesService {
   private http = inject(HttpClient);
   
-  // CAMBIA ESTA LÍNEA: Usa tu link de Render
-  private apiUrl = 'https://api-rsg.onrender.com/api/solicitudes';
+  // CORRECCIÓN: El endpoint en tu index.js es 'mantenimiento'
+  private apiUrl = 'https://api-rsg.onrender.com/api/mantenimiento';
 
   getSolicitudes() {
     return this.http.get<any[]>(this.apiUrl);
